@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support - Spotify Playlist Builder</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6; }
-    header { text-align: center; margin-bottom: 40px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support - Spotify Playlist Builder</title>
+<style>
+  :root {
+    --bg-light: #f0f2f5;
+    --bg-dark: #121212;
+    --text-light: #121212;
+    --text-dark: #f0f2f5;
+    --accent: #1DB954;
+    --accent-dark: #17a84b;
+  }
+
+  body { font-family: "Segoe UI", Arial, sans-serif; margin:0; padding:0; background-color: var(--bg-light); color: var(--text-light); transition: background-color 0.3s, color 0.3s; }
+  header { text-align:center; padding:50px 20px; background-color: var(--accent); color:white; }
+  main { max-width:900px; margin:40px auto; padding:0 20px; }
+  section { margin-bottom:30px; }
+  a { color: var(--accent); text-decoration:none; }
+  footer { text-align:center; padding:20px; font-size:0.9em; border-top:1px solid #ccc; }
+
+  body.dark { background-color: var(--bg-dark); color: var(--text-dark); }
+  body.dark header { background-color: var(--accent-dark); }
+  body.dark a { color: var(--accent); }
+
+  #theme-toggle { position: fixed; top:20px; right:20px; background-color: var(--accent); color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; font-weight:bold; }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Support</h1>
-  </header>
+<button id="theme-toggle">Toggle Dark Mode</button>
+<header>
+  <h1>Support</h1>
+</header>
+<main>
   <section>
-    <p>If you encounter any issues or have questions about the Spotify Playlist Builder, please contact us:</p>
+    <p>If you have any questions, problems, or suggestions, please contact us:</p>
     <ul>
-      <li>Email: <a href="mailto:support@example.com">support@example.com</a></li>
-      <li>FAQ: <a href="index.html">Back to Homepage</a></li>
+      <li>Email: <a href="mailto:hudsoduk@gmail.com">hudsoduk@gmail.com</a></li>
+      <li>Phone: 802‑999‑1125</li>
     </ul>
+    <p>We aim to respond within 24–48 hours.</p>
   </section>
+  <section>
+    <a href="index.html">Back to Home</a>
+  </section>
+</main>
+<footer>
+  &copy; 2026 Hudson Dukette. All rights reserved.
+</footer>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle.addEventListener('click', () => { document.body.classList.toggle('dark'); });
+</script>
 </body>
 </html>
