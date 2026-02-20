@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo - Spotify Playlist Builder</title>
+<style>
+  :root {
+    --bg-light: #f0f2f5;
+    --bg-dark: #121212;
+    --text-light: #121212;
+    --text-dark: #f0f2f5;
+    --accent: #1DB954;
+    --accent-dark: #17a84b;
+  }
+
+  body { font-family: "Segoe UI", Arial, sans-serif; margin:0; padding:0; background-color: var(--bg-light); color: var(--text-light); transition: background-color 0.3s, color 0.3s;}
+  header { text-align:center; padding:50px 20px; background-color: var(--accent); color:white; }
+  main { max-width:900px; margin:40px auto; padding:0 20px; }
+  section { margin-bottom:30px; }
+  a { color: var(--accent); text-decoration:none; }
+  footer { text-align:center; padding:20px; font-size:0.9em; border-top:1px solid #ccc; }
+
+  body.dark { background-color: var(--bg-dark); color: var(--text-dark); }
+  body.dark header { background-color: var(--accent-dark); }
+  body.dark a { color: var(--accent); }
+
+  #theme-toggle { position: fixed; top:20px; right:20px; background-color: var(--accent); color:white; border:none; padding:10px 15px; border-radius:8px; cursor:pointer; font-weight:bold; }
+</style>
+</head>
+<body>
+<button id="theme-toggle">Toggle Dark Mode</button>
+<header>
+  <h1>Demo Placeholder</h1>
+</header>
+<main>
+  <section>
+    <p>This page is a placeholder for the demo recording of the Spotify Playlist Builder app.</p>
+    <p>In the real demo, you will see:</p>
+    <ul>
+      <li>Entering a list of artists</li>
+      <li>Generating a playlist via the app</li>
+      <li>Showing the playlist created in Spotify</li>
+      <li>Navigation between Privacy, Terms, and Support pages</li>
+      <li>Light and Dark mode toggle functionality</li>
+    </ul>
+    <p>Once your real demo video is ready, replace this page or link to your hosted video (e.g., YouTube unlisted link).</p>
+  </section>
+  <section>
+    <a href="index.html">Back to Home</a>
+  </section>
+</main>
+<footer>
+  &copy; 2026 Hudson Dukette. All rights reserved.
+</footer>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle.addEventListener('click', () => { document.body.classList.toggle('dark'); });
+</script>
+</body>
+</html>
