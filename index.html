@@ -1,30 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Playlist Builder</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6; }
-    header { text-align: center; margin-bottom: 40px; }
-    a.button { display: inline-block; padding: 10px 20px; margin: 10px; background-color: #1DB954; color: white; text-decoration: none; border-radius: 5px; }
-    a.button:hover { background-color: #17a84b; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Playlist Builder</title>
+<style>
+  :root {
+    --bg-light: #f0f2f5;
+    --bg-dark: #121212;
+    --text-light: #121212;
+    --text-dark: #f0f2f5;
+    --accent: #1DB954;
+    --accent-dark: #17a84b;
+  }
+
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--accent);
+    color: white;
+  }
+
+  header h1 { margin-bottom: 10px; }
+  header p { margin-top: 0; }
+
+  main { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+  section { margin-bottom: 40px; }
+
+  a.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px 5px 0 5px;
+    background-color: white;
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  a.button:hover { background-color: var(--accent-dark); color: white; }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Dark Mode */
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  body.dark header { background-color: var(--accent-dark); }
+  body.dark a.button { background-color: var(--text-dark); color: var(--accent); }
+  body.dark a.button:hover { background-color: var(--accent); color: var(--text-dark); }
+
+  /* Toggle button */
+  #theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Spotify Playlist Builder</h1>
-    <p>Create full playlists of any artists’ songs quickly and easily.</p>
-    <a class="button" href="https://example.com/demo" target="_blank">Watch Demo</a>
-    <a class="button" href="support.html">Support</a>
-  </header>
+<button id="theme-toggle">Toggle Dark Mode</button>
+<header>
+  <h1>Spotify Playlist Builder</h1>
+  <p>Create full playlists of any artists’ songs quickly and easily.</p>
+  <a class="button" href="privacy.html">Privacy Policy</a>
+  <a class="button" href="terms.html">Terms of Service</a>
+  <a class="button" href="support.html">Support</a>
+</header>
+<main>
   <section>
     <h2>About</h2>
     <p>This app allows users to generate Spotify playlists containing all songs from a list of artists. It uses the Spotify API and securely handles your account authentication.</p>
   </section>
+
   <section>
-    <h2>Privacy & Terms</h2>
-    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hudsoduk@gmail.com">hudsoduk@gmail.com</a></p>
+    <p>Phone: 802‑999‑1125</p>
   </section>
+</main>
+<footer>
+  &copy; 2026 Hudson Dukette. All rights reserved.
+</footer>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+  });
+</script>
 </body>
 </html>
